@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.hero {
+  /* 100vh heißt das 100% des Viewports genutzt werden  */
+  height: 100vh;
+  /* Alle Einstellungen für das Hintergrundbild */
+  /*----- linear-gradient nochmal genauer ansehen!! */
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("./images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Alle Deklerationen für die Elemente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Texte zentriert darstellen */
+  text-align: center;
+}
+
+.title {
+  font-family: "Lobster";
+  font-size: 13vh;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #d3d3d3;
+  margin-bottom: 3em;
+}
+.hero-button {
+  display: inline-block; /* Damit das <a> wie ein Block wirkt */
+  padding: 20px 30px; /* Innenabstand für einen typischen Button-Look */
+  font-size: 16px; /* Schriftgröße */
+  color: white; /* Textfarbe */
+  background-color: #ff3030; /* Hintergrundfarbe (z. B. Blau) */
+  border: none; /* Kein Rand */
+  border-radius: 0px; /* Abgerundete Ecken */
+  text-align: center; /* Text zentrieren */
+  text-decoration: none; /* Unterstreichung entfernen */
+  cursor: pointer; /* Zeigt an, dass es klickbar ist */
+  transition: background-color 0.3s ease; /* Sanfter Hover-Effekt */
+}
+
+.hero-button:hover {
+  display: inline-block; /* Damit das <a> wie ein Block wirkt */
+  padding: 20px 30px; /* Innenabstand für einen typischen Button-Look */
+  font-size: 16px; /* Schriftgröße */
+  color: #ff3030; /* Textfarbe */
+  background-color: transparent; /* Hintergrundfarbe (z. B. Blau) */
+  border: solid 1px #ff3030; /* Kein Rand */
+  border-radius: 0px; /* Abgerundete Ecken */
+  text-align: center; /* Text zentrieren */
+  text-decoration: none; /* Unterstreichung entfernen */
+  cursor: pointer; /* Zeigt an, dass es klickbar ist */
+  transition: background-color 0.3s ease; /* Sanfter Hover-Effekt */
+}
