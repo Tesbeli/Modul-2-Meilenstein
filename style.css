@@ -17,9 +17,43 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-nav {
-  background-color: #1a1a1a;
+div.top {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
+
+nav ul {
+  background-color: #1a1a1a;
+  padding: 1.5rem 0 1.5rem 0;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none; /* Entfernt die Aufzählungspunkte */
+  flex: 0 0 auto; /* Hiermit nimmt die Nav nur so viel Platz von der vh ein, wie benötigt */
+}
+
+nav a {
+  padding: 0 1.1rem 0 0;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-variant: all-small-caps; /* alles in Caps */
+  overflow-wrap: break-word; /* Bricht Wörter in Silben auf */
+  hyphens: manual; /* Hyphenation aktivieren */
+  /* Ermöglicht mehrzeilige Links mit zentrierter Ausrichtung */
+  display: inline-block;
+  text-align: center;
+}
+
+nav a:hover,
+a:focus,
+a:active {
+  color: #ff3030;
+}
+
 .hero {
   /* 100vh heißt das 100% des Viewports genutzt werden  */
   height: 100vh;
@@ -37,6 +71,7 @@ nav {
   align-items: center;
   /* Texte zentriert darstellen */
   text-align: center;
+  flex: 1; /* Hero-Section nimmt den Rest der VH neben Nav ein */
 }
 
 .title {
@@ -82,6 +117,11 @@ nav {
     line-height: 4rem;
   }
 
+  nav a {
+    font-size: 1.5rem;
+    padding: 0 1.2rem 0 1.2rem;
+  }
+
   .subtitle {
     font-size: 1.5rem;
   }
@@ -95,5 +135,10 @@ nav {
   .title {
     font-size: 6rem;
     line-height: 6.5rem;
+  }
+
+  nav a {
+    font-size: 1.6rem;
+    padding: 0 1.5rem 0 1.5rem;
   }
 }
