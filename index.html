@@ -15,13 +15,13 @@
   </head>
   <body>
     <div class="top">
-      <nav>
-        <ul>
-          <li><a href="#">Über uns</a></li>
-          <!-- Das &shy; wird hier angegeben, um eine fest Worttrennung vorzugeben -->
-          <li><a href="#">Speise&shy;karte</a></li>
-          <li><a href="#">Öffnungs&shy;zeiten</a></li>
-        </ul>
+      <nav class="nav">
+        <!-- Emmit-Befehl: a.nav-ite*3 -->
+        <a href="#">Über uns</a>
+        <!-- Das &shy; wird hier angegeben, um eine feste Worttrennung vorzugeben -->
+        <!-- Mit <wbr /> kann man den Wortumbruch noch einfacher umsetzen. Damit spart man sich auch die Regeln im CSS -->
+        <a href="#">Speise&shy;karte</a>
+        <a href="#">Öffnungs&shy;zeiten</a>
       </nav>
       <section class="hero">
         <h1 class="title">Pizzeria<br />Mamma Mia</h1>
