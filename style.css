@@ -17,6 +17,7 @@ body {
   font-family: "Inter", sans-serif;
   /* !!! Aus Lösung: CSS-Variante anlegen für Farbe */
   --primary-color: #ff3030;
+  --text-color: var;
 }
 
 div.top {
@@ -94,9 +95,9 @@ a:active {
   color: #d3d3d3;
   margin-bottom: 4rem;
 }
-.hero-button {
+.button {
   display: inline-block; /* Damit das <a> wie ein Block wirkt */
-  padding: 1rem 2rem; /* Innenabstand für einen typischen Button-Look */
+  padding: 0 1rem 0 2rem; /* Innenabstand für einen typischen Button-Look */
   color: #ffffff; /* Textfarbe */
   background-color: var(--primary-color); /* Hintergrundfarbe */
   border: none; /* Kein Rand */
@@ -107,7 +108,7 @@ a:active {
   transition: all 0.2s ease-in-out; /* Sanfter Hover-Effekt */
 }
 
-.hero-button:hover {
+.button:hover {
   color: var(--primary-color); /* Textfarbe */
   background-color: transparent; /* Hintergrundfarbe */
   border: solid 1px var(--primary-color); /* Kein Rand */
@@ -131,7 +132,7 @@ a:active {
     font-size: 1.5rem;
   }
 
-  .hero-button {
+  .button {
     padding: 1.2rem 2.5rem;
   }
 }
