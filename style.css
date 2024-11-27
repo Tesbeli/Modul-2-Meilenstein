@@ -17,7 +17,7 @@ body {
   font-family: "Inter", sans-serif;
   /* !!! Aus Lösung: CSS-Variante anlegen für Farbe */
   --primary-color: #ff3030;
-  --text-color: var;
+  --text-color: #ddd;
 }
 
 div.top {
@@ -25,7 +25,7 @@ div.top {
   flex-direction: column;
   height: 100vh;
 }
-
+/* Navigation */
 .nav {
   background-color: #1a1a1a;
   padding: 1.5rem 0 1.5rem 0;
@@ -60,6 +60,8 @@ a:active {
   color: var(--primary-color);
 }
 
+/* Herosection */
+
 .hero {
   /* 100vh heißt das 100% des Viewports genutzt werden  */
   height: 100vh;
@@ -92,12 +94,12 @@ a:active {
 }
 
 .subtitle {
-  color: #d3d3d3;
+  color: var(--text-color);
   margin-bottom: 4rem;
 }
 .button {
   display: inline-block; /* Damit das <a> wie ein Block wirkt */
-  padding: 0 1rem 0 2rem; /* Innenabstand für einen typischen Button-Look */
+  padding: 1rem 2rem; /* Innenabstand für einen typischen Button-Look */
   color: #ffffff; /* Textfarbe */
   background-color: var(--primary-color); /* Hintergrundfarbe */
   border: none; /* Kein Rand */
@@ -106,6 +108,7 @@ a:active {
   cursor: pointer; /* Zeigt an, dass es klickbar ist */
   /* Aus Lösung: */
   transition: all 0.2s ease-in-out; /* Sanfter Hover-Effekt */
+  width: fit-content;
 }
 
 .button:hover {
@@ -114,8 +117,63 @@ a:active {
   border: solid 1px var(--primary-color); /* Kein Rand */
   /* transition: background-color 0.3s ease; */
 }
+/* About Us */
 
-/* Aus Lösung - Für bessere Darstellung auf großen Geräten */
+/* Um die beiden Hauptspalten (links und rechts) nebeneinander darzustellen */
+.container {
+  display: flex; /* Flexbox zur Anordnung der Spalten */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Abstand zwischen Spalten */
+  padding: 20px;
+  margin: 2rem;
+}
+/* Text-Bereich */
+.about-content {
+  display: flex;
+  flex-direction: column; /* Elemente untereinander anordnen */
+  gap: 2rem; /* Abstand zwischen Überschrift, Text und Button */
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  flex: 1; /* Nimmt genauso viel Platz wie die Bilder ein */
+}
+
+.heading {
+  text-transform: uppercase;
+  /* Unterstrich */
+  border-bottom: var(--primary-color) solid 1px;
+  width: fit-content;
+}
+/* Bilder */
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Nimmt genauso viel Platz wie der Textbereich ein */
+}
+
+.image-grid {
+  display: grid; /* Grid-Layout für Bilder */
+  grid-template-rows: repeat(2, 1fr); /* Zwei Reihen */
+  grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+  gap: 10px; /* Abstand zwischen den Bildern */
+}
+
+.image-grid img {
+  width: 100%; /* Bilder passen sich der Zellenbreite an */
+  height: auto; /* Füllt die Zelle */
+  object-fit: cover; /* Schneidet Bild passend zu */
+}
+
+/* Hochformat-Bild nimmt beide Reihen in der linken Spalte ein */
+.image-grid img:nth-child(1) {
+  grid-column: 1 / 2; /* Nimmt erste Spalte ein */
+  grid-row: 1 / 3; /* Überspannt zwei Reihen */
+}
+
 /* Tablet */
 @media only screen and (min-width: 600px) {
   nav a {
@@ -139,12 +197,23 @@ a:active {
 /* Laptop/Desktop */
 @media only screen and (min-width: 1000px) {
   nav a {
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
     padding: 0 1.5rem 0 1.5rem;
   }
 
   .title {
     font-size: 6rem;
     line-height: 6.5rem;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    margin: 5rem 15rem 5rem 15rem;
+  }
+
+  .heading {
+    font-size: 2rem;
   }
 }
