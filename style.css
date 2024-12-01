@@ -18,6 +18,7 @@ body {
   /* !!! Aus Lösung: CSS-Variante anlegen für Farbe */
   --primary-color: #ff3030;
   --text-color: #d3d3d3;
+  --background-color: #303030;
 }
 
 div.top {
@@ -125,6 +126,7 @@ a:active {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 20px; /* Abstand zwischen Spalten */
   padding: 20px;
   margin: 2rem;
@@ -191,7 +193,7 @@ a:active {
   align-items: center;
   /* Texte zentriert darstellen */
   text-align: center;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .table {
@@ -202,12 +204,64 @@ a:active {
 .table-left {
   width: 50%;
   text-align: left;
-  font-style: var(--text-color);
+  color: var(--text-color);
 }
 
 .table-right {
   width: 50%;
   text-align: right;
+}
+
+.container-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 4rem;
+}
+
+.contact-image {
+}
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.adress {
+  line-height: 2rem;
+  color: var(--text-color);
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.button-reverse {
+  display: inline-block; /* Damit das <a> wie ein Block wirkt */
+  padding: 1rem 2rem; /* Innenabstand für einen typischen Button-Look */
+  color: var(--primary-color); /* Textfarbe */
+  background-color: transparent; /* Hintergrundfarbe */
+  border: solid 1px var(--primary-color); /* Kein Rand */
+  border-radius: 0px; /* Für abgerundete Ecken */
+  text-decoration: none; /* Unterstreichung entfernen */
+  cursor: pointer; /* Zeigt an, dass es klickbar ist */
+  /* Aus Lösung: */
+  transition: all 0.2s ease-in-out; /* Sanfter Hover-Effekt */
+  width: fit-content;
+}
+
+.footer {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem;
 }
 
 /* Tablet */
@@ -227,6 +281,18 @@ a:active {
   }
 
   .button {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .container-contact {
+    flex-direction: row;
+  }
+
+  .contact-image {
+    width: 60%;
+  }
+
+  .button-reverse {
     padding: 1.5rem 2.5rem;
   }
 }
