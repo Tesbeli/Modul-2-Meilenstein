@@ -1,10 +1,10 @@
 /* Anstatt die Google-Fonts in den HTML-Code zu schreiben, kann man sie auch hier via @import einfügen. ACHTUNG, bei kommerzieller Nutzung Fonds selbst hosten und nicht importieren */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-/* So kann man die Seite scrollbar machen, solang man noch keine weiteren Inhalte eingebaut hat */
-.platzhalter {
+/* So kann man die Seite scrollbar machen, solang man noch keine weiteren Inhalte eingebaut hat
+ .platzhalter { 
   height: 50vh;
-}
+} */
 
 * {
   margin: 0;
@@ -15,7 +15,7 @@ body {
   background-color: #1a1a1a;
   color: #ffffff;
   font-family: "Inter", sans-serif;
-  /* !!! Aus Lösung: CSS-Variante anlegen für Farbe */
+  /* !!! Aus Lösung: CSS-Variable anlegen für Farbe */
   --primary-color: #ff3030;
   --text-color: #d3d3d3;
   --background-color: #303030;
@@ -192,7 +192,7 @@ a:active {
   /* Alle Einstellungen für das Hintergrundbild */
   /*Gegoogelt--- linear-gradient nochmal genauer ansehen */
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("/images/info.jpg");
+    url("./images/info.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
