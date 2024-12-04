@@ -18,11 +18,11 @@
       <!-- Navigation -->
       <nav class="nav">
         <!-- Emmit-Befehl: a.nav-ite*3 -->
-        <a href="#">Über uns</a>
+        <a href="#about">Über uns</a>
         <!-- Das &shy; wird hier angegeben, um eine feste Worttrennung vorzugeben -->
         <!-- Mit <wbr /> kann man den Wortumbruch noch einfacher umsetzen. Damit spart man sich auch die Regeln im CSS -->
-        <a href="#">Speise&shy;karte</a>
-        <a href="#">Öffnungs&shy;zeiten</a>
+        <a href="menu.html" target="_blank">Speise&shy;karte</a>
+        <a href="#info">Öffnungs&shy;zeiten</a>
       </nav>
       <!-- Hero Section -->
       <section class="hero">
@@ -35,7 +35,7 @@
       </section>
     </div>
     <!-- About us -->
-    <section class="container">
+    <section id="about" class="container">
       <!-- links -->
       <div class="about-content">
         <h2 class="heading">Über uns</h2>
@@ -49,7 +49,7 @@
           findet jeder sein Stück vom Dolce Vita. Komm vorbei, genieße und lass
           dich von unserer Pizza-Magie verzaubern!
         </p>
-        <a href="#" class="button">Zur Speisekarte</a>
+        <a href="menu.html" target="_blank" class="button">Zur Speisekarte</a>
       </div>
       <!-- rechts -->
       <div class="about-image">
@@ -61,7 +61,7 @@
       </div>
     </section>
     <!-- Öffnnungszeiten -->
-    <section class="info">
+    <section id="info" class="info">
       <!-- Überschrift -->
       <h2 class="heading">Öffnungszeiten</h2>
       <!-- Wochentage und  Zeiten -->
@@ -98,7 +98,7 @@
     </section>
     <!-- Kontakt -->
     <section id="contact" class="contact">
-      <div id="contact" class="container">
+      <div class="container">
         <!-- Bild links -->
         <img
           class="contact-image"
@@ -116,20 +116,21 @@
           </p>
           <div class="contact-buttons">
             <a href="tel:+11111" class="button">Jetzt anrufen!</a>
-            <a href="mailto:hello@world.de" class="button-reverse"> E-Mail schreiben</a>
+            <a href="mailto:hello@world.de" class="button-reverse">
+              E-Mail schreiben</a
+            >
           </div>
         </div>
       </div>
     </section>
     <!-- Footer -->
     <footer class="footer">
-        <nav class="footer-nav">
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz&shy;erklärung</a>
-          <a href="#">Jobs</a>
-        </nav>
-        <p class="copyright">© 2023 DevKarriere.de</p>
-      </div>
+      <nav class="footer-nav">
+        <a href="impressum.html" target="_blank">Impressum</a>
+        <a href="#">Datenschutz&shy;erklärung</a>
+        <a href="#">Jobs</a>
+      </nav>
+      <p class="copyright">&copy; 2023 DevKarriere.de</p>
     </footer>
   </body>
 </html>
